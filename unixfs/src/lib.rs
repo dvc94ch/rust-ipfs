@@ -85,11 +85,7 @@ impl fmt::Display for InvalidCidInLink {
     }
 }
 
-impl std::error::Error for InvalidCidInLink {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        Some(&self.source)
-    }
-}
+impl std::error::Error for InvalidCidInLink {}
 
 /// Wrapper around the unexpected UnixFs node type, allowing access to querying what is known about
 /// the type.

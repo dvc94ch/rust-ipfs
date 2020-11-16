@@ -12,10 +12,10 @@ version = "0.2.0"
 default = ["filetime"]
 
 [dependencies]
-cid = { default-features = false, version = "0.5" }
+cid = { version = "0.5.1", git = "https://github.com/multiformats/rust-cid" }
 either = { default-features = false, version = "1.5" }
 filetime = { optional = true, version = "0.2.12" }
-multihash = { default-features = false, version = "0.11" }
+multihash = { version = "0.13.0" }
 quick-protobuf = { default-features = false, features = ["std"], version = "0.7" }
 sha2 = { default-features = false, version = "0.9" }
 

@@ -71,7 +71,7 @@ impl<'a> MessageWrite for WriteableCid<'a> {
         use cid::Version::*;
         use quick_protobuf::sizeofs::*;
 
-        let hash_len = self.0.hash().as_bytes().len();
+        let hash_len = self.0.hash().to_bytes().len();
 
         match self.0.version() {
             V0 => hash_len,
@@ -99,7 +99,7 @@ impl<'a> MessageWrite for WriteableCid<'a> {
 
         self.0
             .hash()
-            .as_bytes()
+            .to_bytes()
             .iter()
             // while this looks bad it cannot be measured; note we cannot use the
             // write_bytes because that is length prefixed bytes write
