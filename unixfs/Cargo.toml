@@ -12,7 +12,7 @@ version = "0.2.0"
 default = ["filetime"]
 
 [dependencies]
-cid = { version = "0.5.1", git = "https://github.com/multiformats/rust-cid" }
+cid = { version = "0.6.0" }
 either = { default-features = false, version = "1.5" }
 filetime = { optional = true, version = "0.2.12" }
 multihash = { version = "0.13.0" }
